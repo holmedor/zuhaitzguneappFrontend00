@@ -7,11 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 /*
 export class AppComponent {
-  title = 'project02';
+  title = 'project03';
 }
 */
 export class AppComponent implements OnInit{
-  title = 'project02';
+  title = 'project03';
   constructor(){
     console.log("Componente principal generado!!!")
   }
