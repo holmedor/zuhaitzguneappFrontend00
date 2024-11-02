@@ -29,6 +29,10 @@ import { IdentificacionComponent } from './identificacion/identificacion.compone
 import { BiometricosComponent } from './biometricos/biometricos.component';
 import { SanitariosComponent } from './sanitarios/sanitarios.component';
 import { ActuacionesComponent } from './actuaciones/actuaciones.component';
+//FIREBASE
+import { environment } from '../environments/environment';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 
 @NgModule({
   declarations: [
@@ -60,7 +64,12 @@ import { ActuacionesComponent } from './actuaciones/actuaciones.component';
     BrowserModule,
     AppRoutingModule,
     routing,
-    HttpClientModule
+    HttpClientModule,
+    BrowserModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireModule,
+    AngularFireModule,
+    AngularFireModule,
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent,MenuComponent]
