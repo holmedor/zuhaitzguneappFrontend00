@@ -11,7 +11,7 @@ import { AboutComponent } from './about/about.component';
 import { ContactoComponent } from './contacto/contacto.component';
 //import { HomeComponent } from './home/home.component';
 import { ServiciosComponent } from './servicios/servicios.component';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { InicioComponent } from './inicio/inicio.component';
 import { MapaComponent } from './mapa/mapa.component';
 import { TareasComponent } from './tareas/tareas.component';
@@ -32,46 +32,42 @@ import { ActuacionesComponent } from './actuaciones/actuaciones.component';
 //FIREBASE
 import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { RouterModule, Routes } from '@angular/router';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    MenuComponent,
-    AboutComponent,
-    ContactoComponent,
-//    HomeComponent,
-    ServiciosComponent,
-    InicioComponent,
-    MapaComponent,
-    TareasComponent,
-    TarjetasComponent,
-    ArbolComponent,
-    LoginComponent,
-    PerfilComponent,
-    AyudaComponent,
-    ArbolesComponent,
-    AccesoComponent,
-    DatosComponent,
-    SubmenuComponent,
-    MenufooterComponent,
-    IdentificacionComponent,
-    BiometricosComponent,
-    SanitariosComponent,
-    ActuacionesComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    routing,
-    HttpClientModule,
-    BrowserModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireModule,
-    AngularFireModule,
-    AngularFireModule,
-  ],
-  providers: [appRoutingProviders],
-  bootstrap: [AppComponent,MenuComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        MenuComponent,
+        AboutComponent,
+        ContactoComponent,
+        //    HomeComponent,
+        ServiciosComponent,
+        InicioComponent,
+        MapaComponent,
+        TareasComponent,
+        TarjetasComponent,
+        ArbolComponent,
+        LoginComponent,
+        PerfilComponent,
+        AyudaComponent,
+        ArbolesComponent,
+        AccesoComponent,
+        DatosComponent,
+        SubmenuComponent,
+        MenufooterComponent,
+        IdentificacionComponent,
+        BiometricosComponent,
+        SanitariosComponent,
+        ActuacionesComponent
+    ],
+    bootstrap: [AppComponent, MenuComponent], 
+    imports: [BrowserModule,
+        AppRoutingModule,
+        routing,
+        BrowserModule,
+        AngularFireModule.initializeApp(environment.firebaseConfig),
+        AngularFirestoreModule,
+        RouterModule], 
+        providers: [appRoutingProviders, provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }

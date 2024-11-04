@@ -1,5 +1,15 @@
 export const environment= {
     production: false,
+/*    firebaseConfig: {
+      apiKey: "AIzaSyCGeEy2VcEHGMpaTmhCB2-moUkiOcyM-bw",
+      authDomain: "zuhaitzguneapp-cba84.firebaseapp.com",
+      projectId: "zuhaitzguneapp-cba84",
+      storageBucket: "zuhaitzguneapp-cba84.firebasestorage.app",
+      messagingSenderId: "915704019256",
+      appId: "1:915704019256:web:ce5c9ff69598d59a95a9cd",
+      measurementId: "G-JVHGEMCRG1"
+    }
+*/    
     firebaseConfig: {
     apiKey: "AIzaSyABzKv_44zOxiNcH6kW232c1xMIvsw_0GY",
     authDomain: "zuhaitzguneapp.firebaseapp.com",

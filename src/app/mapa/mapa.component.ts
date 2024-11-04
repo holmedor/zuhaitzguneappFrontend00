@@ -29,8 +29,8 @@ export class MapaComponent implements OnInit {
     this._router=_router;
   
   }
-  arbol(){
-    this._router.navigate(['/arboles']); //también se le podrían pasar parámetros
+  arbol(nombre: string, p0?: { nombre: any; }){
+    this._router.navigate(['/arboles', nombre]); //también se le podrían pasar parámetros (nombre)
   }
   ngOnInit(): void {
     // Coordenadas de longitud y latitud para centrar el mapa (por ejemplo, Nueva York)
@@ -59,10 +59,16 @@ export class MapaComponent implements OnInit {
     const marker = new Feature({
       //          geometry: new Point(fromLonLat([0, 0])) // Add the marker at longitude 0, latitude 0
       //          geometry: new Point(fromLonLat([-2.92528,43.26271])) //BILBAO
-      geometry: new Point(fromLonLat([-2.9345263852772017, 43.245028850624685])), //LARRASKITU 2
-      name: 'LARRASKITU2'
+      geometry: new Point(fromLonLat([-2.9345263852772017, 43.245028850624685])), //LARRASKITU 2 ventana
+      nombre: 'LARRASKITU 2 ventana'
     });
 
+    const marker2 = new Feature({
+      //          geometry: new Point(fromLonLat([0, 0])) // Add the marker at longitude 0, latitude 0
+      //          geometry: new Point(fromLonLat([-2.92528,43.26271])) //BILBAO
+      geometry: new Point(fromLonLat([-2.934486408597113,43.24484787134856])), //LARRASKITU 2 portal
+      nombre: 'LARRASKITU 2 portal'
+    });
     // Style the marker
     marker.setStyle(new Style({
       image: new Icon({
@@ -72,17 +78,37 @@ export class MapaComponent implements OnInit {
       })
     }));
 
+    marker2.setStyle(new Style({
+      image: new Icon({
+        anchor: [0.5, 1],//ajusta el punto de anclaje del ícono. El valor [0.5, 1] ancla el ícono en el centro inferior, pero puedes cambiarlo según tus necesidades.
+        src: 'assets/marker-icon.png', // Path to your marker icon image
+        scale: 0.05 // Escala del ícono, donde 1 es el tamaño original; usa un valor menor para reducir el tamaño
+      })
+    }));
+
     // Create a vector source and layer for the marker
-    const vectorSource = new VectorSource({
-      features: [marker]
+    const vectorSource2 = new VectorSource({
+      features: [marker2]
     });
 
-    const markerLayer = new VectorLayer({
-      source: vectorSource
+    const markerLayer2 = new VectorLayer({
+      source: vectorSource2
     });
+
+        // Create a vector source and layer for the marker
+        const vectorSource = new VectorSource({
+          features: [marker]
+        });
+    
+        const markerLayer = new VectorLayer({
+          source: vectorSource
+        });
 
     // Add the marker layer to the map
     this.map.addLayer(markerLayer);
+
+        // Add the marker layer to the map
+        this.map.addLayer(markerLayer2);
 
     // Manejar clics en el mapa
     this.map.on('click', (event) => {
@@ -90,9 +116,9 @@ export class MapaComponent implements OnInit {
       this.map.forEachFeatureAtPixel(event.pixel, (feature) => {
         if (feature) {
           // Puedes acceder a las propiedades del marcador
-          const name = feature.get('name');
-          alert(`Hiciste clic en el marcador: ${name}`);
-          this.arbol();
+          const nombre: string = feature.get('nombre');
+          alert(`Hiciste clic en el marcador: ${nombre}`);
+          this.arbol(nombre);
         }
       });
     });

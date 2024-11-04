@@ -25,8 +25,9 @@
   &nbsp;
   <a [routerLink]="['/login']">LOGIN</a>
   &nbsp;
+<a [routerLink]="['/arboles']" [queryParams]="{ nombre: ''}">ARBOLES</a>
 -->
-<a [routerLink]="['/arboles']">ARBOLES</a>
+<a [routerLink]="['/arboles',nombre]">ARBOLES</a>
   &nbsp;
   <a [routerLink]="['/datos']">REGISTRO DATOS</a>
   &nbsp;
