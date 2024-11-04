@@ -3,7 +3,7 @@
     "source": "dataconnect"
   },
   "hosting": {
-    "public": "dist/project04/browser",
+    "public": "dist/project05/browser",
     "ignore": [
       "firebase.json",
       "**/.*",

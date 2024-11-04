@@ -7,11 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 /*
 export class AppComponent {
-  title = 'project04';
+  title = 'project05';
 }
 */
 export class AppComponent implements OnInit{
-  title = 'project04';
+  title = 'project05';
 nombre: any|string;
 
 
