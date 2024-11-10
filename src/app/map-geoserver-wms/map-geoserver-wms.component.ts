@@ -27,7 +27,7 @@ export class MapGeoserverWMSComponent implements OnInit {
     const centerY = (extent[1] + extent[3]) / 2;
     const view = new View({
       center: olProj.fromLonLat([centerX, centerY ]), // establece el centro de la vista
-      zoom: 17,
+      zoom: 20,
       projection: 'EPSG:3857' // Usa la proyección por defecto de OpenLayers
     });
 

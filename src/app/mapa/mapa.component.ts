@@ -16,7 +16,8 @@ import { ActivatedRoute, Router } from '@angular/router';
   selector: 'app-mapa',
   //  templateUrl: './mapa.component.html',
   //  styleUrl: './mapa.component.css'
-  template: '<div id="map" class="map"></div>',
+//  template: '<div id="map" class="map"></div>',
+templateUrl: './mapa.component.html',
   styleUrls: ['./mapa.component.css']
 })
 export class MapaComponent implements OnInit {
@@ -45,7 +46,7 @@ export class MapaComponent implements OnInit {
     //const centerCoordinates = fromLonLat([-2.934349019846798,43.24486051973659]);// Coordenadas de LARRASKITU 2
     const centerCoordinates = fromLonLat([-2.9345263852772017, 43.245028850624685]);
     this.map = new Map({
-      target: 'map',
+      target: 'mapa',
       layers: [
         new TileLayer({
           source: new OSM()

@@ -1,5 +1,5 @@
 specVersion: "v1beta"
-serviceId: "project06"
+serviceId: "zuhaitzguneappFrontend00"
 location: "us-central1"
 schema:
   source: "./schema"

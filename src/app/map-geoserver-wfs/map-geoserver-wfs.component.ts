@@ -66,7 +66,7 @@ export class MapGeoserverWFSComponent implements OnInit {
       layers: [osmLayer, this.wfsLayer],
       view: new View({
         center: fromLonLat([centerX, centerY]),
-        zoom: 19,
+        zoom: 20,
         projection: 'EPSG:3857',
       }),
     });

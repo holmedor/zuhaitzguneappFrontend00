@@ -3,7 +3,7 @@
     "source": "dataconnect"
   },
   "hosting": {
-    "public": "dist/project06/browser",
+    "public": "dist/zuhaitzguneappFrontend00/browser",
     "ignore": [
       "firebase.json",
       "**/.*",

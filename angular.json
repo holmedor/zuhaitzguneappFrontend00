@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "project06": {
+    "zuhaitzguneappFrontend00": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/project06",
+            "outputPath": "dist/zuhaitzguneappFrontend00",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -72,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "project06:build:production"
+              "buildTarget": "zuhaitzguneappFrontend00:build:production"
             },
             "development": {
-              "buildTarget": "project06:build:development"
+              "buildTarget": "zuhaitzguneappFrontend00:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "project06:build"
+            "buildTarget": "zuhaitzguneappFrontend00:build"
           }
         },
         "test": {

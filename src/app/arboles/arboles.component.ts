@@ -35,7 +35,7 @@ export class ArbolesComponent implements OnInit{
       console.log(this['id']);
       console.log(this['altura']);
       console.log(this['diametro']);
-      console.log(this.nombre);
+      console.log(this['nombre']);
     });
 
     // Obtener los parámetros de consulta (query params)

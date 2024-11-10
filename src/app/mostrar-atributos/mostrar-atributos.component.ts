@@ -6,28 +6,46 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AtributoService } from '../servicio/atributo.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-mostrar-atributos',
   standalone: true,
   imports: [CommonModule],
-  
+
   templateUrl: './mostrar-atributos.component.html',
   styleUrl: './mostrar-atributos.component.css'
 })
 export class MostrarAtributosComponent implements OnInit {
+  //  [x: string]: any;
   attributes: any = null;
   attributeKeys: string[] = [];
 
-  constructor(private attributeService: AtributoService) {}
+  private _route: ActivatedRoute;
+  private _router: Router;
 
+  //  constructor(private attributeService: AtributoService) {}
+  constructor(
+    _route: ActivatedRoute, _router: Router,
+    private attributeService: AtributoService
+  )
+  //  {}
+  {
+    this._route = _route;
+    this._router = _router;
+  }
   ngOnInit(): void {
     //genero el observable y me suscribo
     this.attributeService.atributos.subscribe({
       next: data => {
-      console.log("dato",data);
-      this.attributes = data;
-      this.attributeKeys = data ? Object.keys(data) : [];
-    }});
+        console.log("dato", data);
+        this.attributes = data;
+        this.attributeKeys = data ? Object.keys(data) : [];
+      }
+    });
+  }
+  mapaWFS() {
+    this._router.navigate(['/mapaWFS']); //también se le podrían pasar parámetros
   }
 }
+

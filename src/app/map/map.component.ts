@@ -1,5 +1,5 @@
 // componente que muestra el geoJson que he desarrollado en laravel
-// muestra un punto en Madrid
+// muestra dos puntos en Larraskitu
 import { Component } from '@angular/core';
 import { OnInit, inject } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';

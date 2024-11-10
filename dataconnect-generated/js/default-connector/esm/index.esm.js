@@ -2,7 +2,7 @@ import { getDataConnect, validateArgs } from 'firebase/data-connect';
 
 export const connectorConfig = {
   connector: 'default',
-  service: 'project06',
+  service: 'zuhaitzguneappFrontend00',
   location: 'us-central1'
 };
 
