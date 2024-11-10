@@ -29,8 +29,12 @@ export class MapaComponent implements OnInit {
     this._router=_router;
   
   }
-  arbol(nombre: string, p0?: { nombre: any; }){
+/*  arbol(nombre: string, p0?: { nombre: any; }){
     this._router.navigate(['/arboles', nombre]); //también se le podrían pasar parámetros (nombre)
+  }
+    */
+  arbol(id: number, altura: number, diametro: number, nombre: string, p0?: { id: any; altura: any; diametro: any; nombre: any; }){
+    this._router.navigate(['/arboles',id,altura,diametro,nombre]); //también se le podrían pasar parámetros (nombre)
   }
   ngOnInit(): void {
     // Coordenadas de longitud y latitud para centrar el mapa (por ejemplo, Nueva York)
@@ -60,6 +64,9 @@ export class MapaComponent implements OnInit {
       //          geometry: new Point(fromLonLat([0, 0])) // Add the marker at longitude 0, latitude 0
       //          geometry: new Point(fromLonLat([-2.92528,43.26271])) //BILBAO
       geometry: new Point(fromLonLat([-2.9345263852772017, 43.245028850624685])), //LARRASKITU 2 ventana
+      id: 1,
+      altura:20,
+      diametro:30,
       nombre: 'LARRASKITU 2 ventana'
     });
 
@@ -67,6 +74,9 @@ export class MapaComponent implements OnInit {
       //          geometry: new Point(fromLonLat([0, 0])) // Add the marker at longitude 0, latitude 0
       //          geometry: new Point(fromLonLat([-2.92528,43.26271])) //BILBAO
       geometry: new Point(fromLonLat([-2.934486408597113,43.24484787134856])), //LARRASKITU 2 portal
+      id: 2,
+      altura:34,
+      diametro:20,
       nombre: 'LARRASKITU 2 portal'
     });
     // Style the marker
@@ -116,9 +126,12 @@ export class MapaComponent implements OnInit {
       this.map.forEachFeatureAtPixel(event.pixel, (feature) => {
         if (feature) {
           // Puedes acceder a las propiedades del marcador
+          const id: number = feature.get('id');
+          const altura: number = feature.get('altura');
+          const diametro: number = feature.get('diametro');
           const nombre: string = feature.get('nombre');
-          alert(`Hiciste clic en el marcador: ${nombre}`);
-          this.arbol(nombre);
+//          alert(`Hiciste clic en el marcador: ${nombre}`);
+          this.arbol(id,altura,diametro,nombre);
         }
       });
     });

@@ -1,5 +1,5 @@
 specVersion: "v1beta"
-serviceId: "project05"
+serviceId: "project06"
 location: "us-central1"
 schema:
   source: "./schema"

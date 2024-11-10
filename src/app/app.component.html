@@ -17,17 +17,17 @@
   &nbsp;
   <a [routerLink]="['/mapa']">MAPA</a>
   &nbsp;
+  <a [routerLink]="['/map']">MAP</a>
+  &nbsp;
+  <a [routerLink]="['/mapaWFS']">MAPA WFS</a>
+  &nbsp;
+  <a [routerLink]="['/mapaWMS']">MAPA WMS</a>
+  &nbsp;
   <a [routerLink]="['/tareas']">TAREAS</a>
   &nbsp;
-<!--  <a [routerLink]="['/tarjetas']">TARJETAS</a>
+  <a [routerLink]="['/arboles/:id/:altura/:diametro/:nombre']">ARBOLES</a>
   &nbsp;
-    <a [routerLink]="['/arbol']">ARBOL</a>
-  &nbsp;
-  <a [routerLink]="['/login']">LOGIN</a>
-  &nbsp;
-<a [routerLink]="['/arboles']" [queryParams]="{ nombre: ''}">ARBOLES</a>
--->
-<a [routerLink]="['/arboles',nombre]">ARBOLES</a>
+  <a [routerLink]="['/lista']"> LISTA</a>
   &nbsp;
   <a [routerLink]="['/datos']">REGISTRO DATOS</a>
   &nbsp;
@@ -37,7 +37,17 @@
   &nbsp;
   <a [routerLink]="['/acceso']">ACCESO</a>
   &nbsp;
-<!--
+  <!--  <a [routerLink]="['/tarjetas']">TARJETAS</a>
+      <a [routerLink]="['/arboles']" [queryParams]="{ id:'',altura:'',diametro:'',nombre:''}">ARBOLES</a>
+  <a [routerLink]="['/arboles_tarjetas']">ARBOLES LISTADO</a>
+  &nbsp;
+    <a [routerLink]="['/arbol']">ARBOL</a>
+  &nbsp;
+  <a [routerLink]="['/login']">LOGIN</a>
+  &nbsp;
+<a [routerLink]="['/arboles']" [queryParams]="{ nombre: ''}">ARBOLES</a>
+-->
+  <!--
   <a [routerLink]="['/servicios']">Servicios</a>
   &nbsp;
   <a [routerLink]="['/about']">About</a>
@@ -201,5 +211,3 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-
