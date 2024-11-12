@@ -1,18 +1,27 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <img class="img-fluid w-25" src="/assets/img/Zuhaitzguneapp.png">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link" [routerLink]="['/']"><i class="fa-solid fa-house"></i> Inicio</a>
+        <a class="nav-link" [routerLink]="['/mapa']"><i class="fa-solid fa-map"></i> Mapa</a>
+        <a class="nav-link" [routerLink]="['/tareas']"><i class="fa-solid fa-list-check"></i> Tareas</a>
+        <a class="nav-link" [routerLink]="['/arboles/:id/:altura/:diametro/:nombre']"><i class="fa-solid fa-tree"></i> Arboles</a>
+        <a class="nav-link" [routerLink]="['/datos']"><i class="fa-solid fa-file-lines"></i> Registrar Datos</a>
+        <a class="nav-link" [routerLink]="['/ayuda']"><i class="fa-solid fa-circle-question"></i> Ayuda</a>
+        <a class="nav-link" [routerLink]="['/perfil']"><i class="fa-solid fa-user"></i> Perfil</a>
+        <a class="nav-link" [routerLink]="['/acceso']"><i class="fa-solid fa-right-to-bracket"></i> Acceso</a>
+        <a class="nav-link"><i class="fa-solid fa-sun"></i></a>
+      </div>
+    </div>
+  </div>
+</nav>
 
-<style>
 
-</style>
-
-<h1>Componente por defecto</h1>
-<nav>
+<!-- <nav>
   <a [routerLink]="['/']">INICIO</a>
   &nbsp;
   <a [routerLink]="['/mapa']">MAPA</a>
@@ -35,7 +44,9 @@
   &nbsp;
   <a [routerLink]="['/perfil']">PERFIL</a>
   &nbsp;
-  <a [routerLink]="['/acceso']">ACCESO</a>
+  <a [routerLink]="['/acceso']">ACCESO</a> -->
+
+
   &nbsp;
   <!--  <a [routerLink]="['/tarjetas']">TARJETAS</a>
       <a [routerLink]="['/arboles']" [queryParams]="{ id:'',altura:'',diametro:'',nombre:''}">ARBOLES</a>
@@ -54,7 +65,7 @@
   &nbsp;
   <a [routerLink]="['/contacto']">Contacto</a>
 -->
-</nav>
+<!-- </nav> -->
 <router-outlet></router-outlet>
 <!--
 <main class="main">
@@ -204,10 +215,4 @@
   </div>
 </main>
 -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<script src="https://kit.fontawesome.com/7ee3973043.js" crossorigin="anonymous"></script>
